@@ -6,8 +6,8 @@ const ShowErrorMessage = ({ errorCode, errorMessage }) => {
 };
 
 const mapStateToProps = appState => ({
-    errorMessage: appState.errors.errorMessage,
-    errorCode: appState.errors.errorCode
+    errorMessage: appState.errorsReducers.errorMessage,
+    errorCode: appState.errorsReducers.errorCode
 });
 
 export default connect(mapStateToProps)(ShowErrorMessage);
