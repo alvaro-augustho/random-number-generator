@@ -7,8 +7,8 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config ./config/webpack.config.js -w",
-    "server": "nodemon ./server/app.js",
-    "test": "jest --config ./config/jest.config.json"
+    "server": "nodemon ./server/start.js",
+    "test": "jest"
   },
   "dependencies": {
     "ejs": "^2.5.7",
@@ -16,7 +16,8 @@
     "react": "^15.4.2",
     "react-dom": "^15.3.2",
     "react-redux": "^5.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "eslint-plugin-jest": "^23.8.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -42,8 +43,15 @@
     "sass-loader": "^4.1.1",
     "sinon": "^2.3.5",
     "style-loader": "^0.13.1",
+    "supertest": "^4.0.2",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.18.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

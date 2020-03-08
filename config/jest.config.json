@@ -1,8 +1,0 @@
-{
-	"collectCoverage": true,
-	"collectCoverageFrom" : ["**/*.{js,jsx}", "!**/node_modules/**", "!**/public/**", "!**/test/**"],
-	"coverageReporters": [
-		"lcov",
-		"text"
-	]
-}
