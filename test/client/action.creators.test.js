@@ -13,8 +13,6 @@ describe('async actions', () => {
 
     it('assert that action SET_MIN is dispatched correctly', () => {
 
-        store = mockStore({ min: 0, max: 100, randomNumber: 0});
-
         store.dispatch(actions.setMin(50.47));
 
         // return of async actions
@@ -23,8 +21,6 @@ describe('async actions', () => {
     });
 
     it('assert that action SET_MAX is dispatched correctly', () => {
-
-        store = mockStore({ min: 0, max: 100, randomNumber: 0});
 
         store.dispatch(actions.setMax(150.47));
 
@@ -35,8 +31,6 @@ describe('async actions', () => {
 
     it('assert that action SET_RANDOM_NUMBER is dispatched correctly', () => {
 
-        store = mockStore({ min: 0, max: 100, randomNumber: 0});
-
         store.dispatch(actions.setRandomNumber(225.32));
 
         // return of async actions
@@ -45,8 +39,6 @@ describe('async actions', () => {
     });
 
     it('assert that action SET_ERROR is dispatched correctly', () => {
-
-        store = mockStore({ min: 0, max: 100, randomNumber: 0});
 
         store.dispatch(actions.setError({ errorCode: 404, errorMessage: "Not Found" }));
 
