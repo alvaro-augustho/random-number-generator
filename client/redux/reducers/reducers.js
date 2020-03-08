@@ -1,6 +1,7 @@
 import {
 	SET_MIN,
 	SET_MAX,
+	SET_RANDOM_NUMBER,
 	SET_VISIBILITY_FILTER,
 	VisibilityFilters
 } from '../actions/actions';
@@ -16,24 +17,23 @@ export const visibilityFilter = (state = SHOW_ALL, action) => {
 	}
 };
 
-export const numbersReducers = (state = {min: 0, max: 100, randomNumber: 0}, action) => {
+export const numbersReducers = (state = {min: 0, max: 100, randomNumber: 0.0}, action) => {
 	switch (action.type) {
 		case SET_MIN:
-			return [
-				...state,
-				{
-					min: action.min,
-					completed: false
-				}
-			];
+			return Object.assign({}, state, {
+				min: parseFloat(action.min),
+				completed: false
+			});
 		case SET_MAX:
-			return [
-				...state,
-				{
-					max: action.max,
-					completed: false
-				}
-			];
+			return Object.assign({}, state, {
+				max: parseFloat(action.max),
+				completed: false
+			});
+		case SET_RANDOM_NUMBER:
+			return Object.assign({}, state, {
+				randomNumber: parseFloat(action.randomNumber),
+				completed: false
+			});
 		default:
 			return state;
 	}

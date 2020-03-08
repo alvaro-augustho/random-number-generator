@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { mapDispatchToProps } from '../redux/selectors/home';
 import RangeForm from "./common/RangeForm";
+import RandomNumber from "./common/RandomNumber";
 
 class Home extends Component {
 	constructor(props) {
@@ -17,8 +18,8 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="home">
-				BLEEEEEH
 				<RangeForm/>
+				<RandomNumber/>
 			</div>
 		);
 	}

@@ -12,11 +12,13 @@ class RangeInput extends React.Component {
     handleChange(e) {
         e.preventDefault();
         if(this.props.type === 'min') {
-            this.props.dispatch(setMin(this.refs[this.props.name].value));
+            let value = this.refs[this.props.name].value ? this.refs[this.props.name].value : 0;
+            this.props.dispatch(setMin(value));
         }
 
         if(this.props.type === 'max') {
-            this.props.dispatch(setMax(this.refs[this.props.name].value));
+            let value = this.refs[this.props.name].value ? this.refs[this.props.name].value : 100;
+            this.props.dispatch(setMax(value));
         }
     }
 

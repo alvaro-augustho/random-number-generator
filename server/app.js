@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
 
 app.get('/getNumber', (req, res) => {
 
-	const min = req.query.min ? req.query.min : 0;
-	const max = req.query.max ? req.query.max : 100;
+	const min = req.query.min ? parseFloat(req.query.min) : 0;
+	const max = req.query.max ? parseFloat(req.query.max) : 100;
 
 	res.json({ number: getRandomInt(min, max)});
 });

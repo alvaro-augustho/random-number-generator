@@ -1,5 +1,5 @@
 {
-  "name": "Boilerplate",
+  "name": "random-number-generator",
   "version": "1.0.0",
   "description": "Simple React App",
   "author": "Annie Steenson",
@@ -15,7 +15,8 @@
     "express": "^4.15.3",
     "react": "^15.4.2",
     "react-dom": "^15.3.2",
-    "react-redux": "^5.0.6"
+    "react-redux": "^5.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
