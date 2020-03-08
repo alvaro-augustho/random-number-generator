@@ -2,8 +2,8 @@
  * action types
  */
 
-export const ADD_TODO = 'ADD_TODO';
-export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const SET_MIN = 'SET_MIN';
+export const SET_MAX = 'SET_MAX';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 /*
@@ -20,14 +20,14 @@ export const VisibilityFilters = {
  * action creators
  */
 
-export const addTodo = text => ({
-	type: ADD_TODO,
-	text
+export const setMin = number => ({
+	type: SET_MIN,
+	number
 });
 
-export const toggleTodo = index => ({
-	type: TOGGLE_TODO,
-	index
+export const setMax = number => ({
+	type: SET_MAX,
+	number
 });
 
 export const setVisibilityFilter = filter => ({

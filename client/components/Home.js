@@ -16,7 +16,11 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="home">
-				Home!
+				<label htmlFor="min">Min :</label>
+				<input type="number" id="min" name="min" />
+				<br/><br/>
+				<label htmlFor="max">Max :</label>
+				<input type="number" id="max" name="max" />
 			</div>
 		);
 	}
