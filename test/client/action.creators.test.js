@@ -1,9 +1,7 @@
 import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
 import * as actions from '../../client/redux/actions/actions';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+const mockStore = configureMockStore();
 
 describe('async actions', () => {
 
