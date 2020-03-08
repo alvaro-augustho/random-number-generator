@@ -22,12 +22,12 @@ export const VisibilityFilters = {
 
 export const setMin = number => ({
 	type: SET_MIN,
-	number
+	min: number
 });
 
 export const setMax = number => ({
 	type: SET_MAX,
-	number
+	max: number
 });
 
 export const setVisibilityFilter = filter => ({

@@ -1,6 +1,6 @@
 import {
-	ADD_TODO,
-	TOGGLE_TODO,
+	SET_MIN,
+	SET_MAX,
 	SET_VISIBILITY_FILTER,
 	VisibilityFilters
 } from '../actions/example';
@@ -16,26 +16,32 @@ export const visibilityFilter = (state = SHOW_ALL, action) => {
 	}
 };
 
-export const todos = (state = [], action) => {
+export const numbersReducers = (state = {min: 0, max: 100, randomNumber: 0}, action) => {
 	switch (action.type) {
-		case ADD_TODO:
+		case SET_MIN:
 			return [
 				...state,
 				{
-					text: action.text,
+					min: action.min,
 					completed: false
 				}
 			];
-		case TOGGLE_TODO:
-			return state.map((todo, index) => {
-				if (index === action.index) {
-					return Object.assign({}, todo, {
-						completed: !todo.completed
-					});
+		case SET_MAX:
+			return [
+				...state,
+				{
+					max: action.max,
+					completed: false
 				}
-				return todo;
-			});
+			];
 		default:
 			return state;
 	}
 };
+
+const numbersApp = combineReducers({
+	visibilityFilter,
+	numbersReducers
+});
+
+export default numbersApp;
