@@ -1,4 +1,4 @@
-import { setVisibilityFilter, VisibilityFilters } from '../actions/example';
+import { setVisibilityFilter, VisibilityFilters } from '../actions/actions';
 
 export const mapDispatchToProps = dispatch => {
 	return {

@@ -3,7 +3,7 @@ import {
 	SET_MAX,
 	SET_VISIBILITY_FILTER,
 	VisibilityFilters
-} from '../actions/example';
+} from '../actions/actions';
 
 const { SHOW_ALL } = VisibilityFilters;
 
@@ -38,10 +38,3 @@ export const numbersReducers = (state = {min: 0, max: 100, randomNumber: 0}, act
 			return state;
 	}
 };
-
-const numbersApp = combineReducers({
-	visibilityFilter,
-	numbersReducers
-});
-
-export default numbersApp;

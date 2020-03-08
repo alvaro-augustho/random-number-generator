@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { mapDispatchToProps } from '../redux/selectors/home';
+import RangeForm from "./common/RangeForm";
 
 class Home extends Component {
 	constructor(props) {
@@ -16,15 +17,13 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="home">
-				<label htmlFor="min">Min :</label>
-				<input type="number" id="min" name="min" />
-				<br/><br/>
-				<label htmlFor="max">Max :</label>
-				<input type="number" id="max" name="max" />
+				BLEEEEEH
+				<RangeForm/>
 			</div>
 		);
 	}
-};
+
+}
 
 Home.PropTypes = {
 	dispatchSetVisibilityFilter: PropTypes.func.isRequired
