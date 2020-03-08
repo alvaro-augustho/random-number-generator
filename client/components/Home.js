@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { mapDispatchToProps } from '../redux/selectors/home';
 import RangeForm from "./common/RangeForm";
 import RandomNumber from "./common/RandomNumber";
+import ShowErrorMessage from "./common/ShowErrorMessage";
 
 class Home extends Component {
 	constructor(props) {
@@ -20,6 +21,7 @@ class Home extends Component {
 			<div className="home">
 				<RangeForm/>
 				<RandomNumber/>
+				<ShowErrorMessage/>
 			</div>
 		);
 	}

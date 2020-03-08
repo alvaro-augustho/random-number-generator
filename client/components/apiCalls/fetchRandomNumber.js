@@ -1,10 +1,9 @@
-import {setRandomNumber} from '../../redux/actions/actions';
+import {setRandomNumber, setError} from '../../redux/actions/actions';
 
 function fetchRandomNumber(min, max) {
     return dispatch => {
-        //dispatch(fetchProductsPending());
         fetch('http://localhost:3000/getNumber?min='+min+'&max='+max)
-            .then(res => res.json())
+            .then(res => { if(res.ok) { return res.json(); } else { throw(res); }})
             .then(res => {
                 if(res.error) {
                     throw(res.error);
@@ -13,7 +12,7 @@ function fetchRandomNumber(min, max) {
                 return res.number;
             })
             .catch(error => {
-                //dispatch(fetchProductsError(error));
+                dispatch(setError({errorMessage: error.statusText, errorCode: error.status}));
             });
     };
 }

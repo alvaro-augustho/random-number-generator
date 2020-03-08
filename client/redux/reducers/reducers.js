@@ -2,7 +2,9 @@ import {
 	SET_MIN,
 	SET_MAX,
 	SET_RANDOM_NUMBER,
+	SET_ERROR,
 	SET_VISIBILITY_FILTER,
+
 	VisibilityFilters
 } from '../actions/actions';
 
@@ -12,6 +14,18 @@ export const visibilityFilter = (state = SHOW_ALL, action) => {
 	switch (action.type) {
 		case SET_VISIBILITY_FILTER:
 			return action.filter;
+		default:
+			return state;
+	}
+};
+
+export const errors = (state = { errorMessage: "", errorCode: null }, action) => {
+	switch (action.type) {
+		case SET_ERROR:
+			return Object.assign({}, state, {
+				errorMessage: action.errorMessage,
+				errorCode: action.errorCode
+			});
 		default:
 			return state;
 	}

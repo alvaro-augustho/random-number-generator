@@ -5,6 +5,7 @@
 export const SET_MIN = 'SET_MIN';
 export const SET_MAX = 'SET_MAX';
 export const SET_RANDOM_NUMBER = 'SET_RANDOM_NUMBER';
+export const SET_ERROR = 'SET_ERROR';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 /*
@@ -34,6 +35,10 @@ export const setMax = number => ({
 export const setRandomNumber = number => ({
 	type: SET_RANDOM_NUMBER,
 	randomNumber: number
+});
+
+export const setError = ({ errorCode, errorMessage }) => ({
+	type: SET_ERROR, errorCode, errorMessage
 });
 
 export const setVisibilityFilter = filter => ({
