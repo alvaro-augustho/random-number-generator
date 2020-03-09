@@ -11,7 +11,8 @@ const Header = ({header}) => {
 			<Navbar.Text className="mr-sm-2">
 				Created by: <a title="Go to Linkedin profile"
 							   href="https://www.linkedin.com/in/alvarosouzasilva"
-							   target="_blank">Alvaro Silva</a>
+							   target="_blank"
+							   rel="noreferrer noopener">Alvaro Silva</a>
 			</Navbar.Text>
 		</Navbar>
 	);

@@ -29,8 +29,8 @@ class RangeForm extends React.Component {
                     <Col/>
                     <Col>
                         <Form onSubmit={this.handleSubmit}>
-                            <RangeInput name="min " type="min" defaultValue="0"/>
-                            <RangeInput name="max" type="max" defaultValue="100"/>
+                            <RangeInput name="Minimum" description="Enter the minimum value for the random number" type="min" defaultValue="0"/>
+                            <RangeInput name="Maximum" description="Enter the maximum value for the random number" type="max" defaultValue="100"/>
                             <Button type="submit" value="Submit" sie="lg" block>Submit</Button>
                         </Form>
                     </Col>
