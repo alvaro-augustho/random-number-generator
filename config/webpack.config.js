@@ -1,5 +1,4 @@
 const path = require('path'),
-	webpack = require('webpack'),
 	//HTMLWebpackPlugin = require('html-webpack-plugin'), // Useful when bundles file names change dynamically
 	paths = {
 	    entry: path.resolve('client', 'index.js'),
@@ -36,7 +35,7 @@ module.exports = {
 		    loader: 'json-loader'
 	    },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]

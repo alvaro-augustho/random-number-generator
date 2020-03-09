@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import { visibilityFilter, todos } from "./example";
+import { numbersReducers, errorsReducers } from "./reducers";
 
 const reducers = combineReducers({
-	visibilityFilter,
-	todos
+	numbersReducers,
+	errorsReducers
 });
 
 export default reducers;

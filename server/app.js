@@ -5,10 +5,20 @@ const path = require('path'),
 app.use(express.static(path.resolve('public')));
 app.set('view engine', 'html');
 
-app.get('*', (req, res) => {
-	res.sendFile(path.resolve('public', 'index.html'));
+app.get('/getNumber', (req, res) => {
+
+	const min = req.query.min ? parseFloat(req.query.min) : 0;
+	const max = req.query.max ? parseFloat(req.query.max) : 100;
+
+	res.json({ number: parseFloat(getRandomInt(min, max))});
 });
 
-app.listen(3000, function () {
-	console.log('Express server is up on port 3000');
-});
+function getRandomInt(min, max) {
+	if(min > max) {
+		return (((Math.random() * min)) + min).toFixed(2);
+	} else {
+		return (Math.random() * (max - min) + min).toFixed(2);
+	}
+}
+
+module.exports = app;
