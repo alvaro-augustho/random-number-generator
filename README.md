@@ -8,9 +8,11 @@
 4. npm run test will run all unit tests
 5. npm run test-coverage will run unit tests and show code coverage
 
-/app contains all react logic
+/client contains all React/Redux logic
 
-/app/css contains the bootstrap CSS file
+/client/css contains the bootstrap CSS file
+
+/server contains all Express logic
 
 /public contains all external CSS and JS libraries
 
