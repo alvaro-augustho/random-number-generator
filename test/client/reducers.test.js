@@ -6,7 +6,7 @@ describe('>>> Testing reducers',()=> {
         expect(numbersReducers).toThrow();
     });
 
-    it('+++ create errors function', () => {
+    it('+++ create errorsReducers function', () => {
         expect(errorsReducers).toThrow();
     });
 
