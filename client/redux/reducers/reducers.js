@@ -17,7 +17,7 @@ const errorsReducers = (state = { errorMessage: "", errorCode: null }, action) =
 	}
 };
 
-const numbersReducers = (state = {min: 0, max: 100, randomNumber: 0.0}, action) => {
+const numbersReducers = (state = {min: 0, max: 100, randomNumber: null}, action) => {
 	switch (action.type) {
 		case SET_MIN:
 			return Object.assign({}, state, {

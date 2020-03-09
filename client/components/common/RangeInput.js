@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setMin, setMax } from '../../redux/actions/actions';
 
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+
 class RangeInput extends React.Component {
 
     constructor(props) {
@@ -23,7 +26,15 @@ class RangeInput extends React.Component {
     }
 
     render(){
-        return <input ref={this.props.name} name={this.props.name} onChange={this.handleChange} />;
+
+        return  (<InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                    <InputGroup.Text>{this.props.name}: </InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl defaultValue={parseInt(this.props.defaultValue)} ref={this.props.name} name={this.props.name} onChange={this.handleChange}/>
+                </InputGroup>);
+
+        /*return <input ref={this.props.name} name={this.props.name} onChange={this.handleChange} />;*/
     }
 }
 

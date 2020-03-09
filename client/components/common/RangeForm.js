@@ -3,6 +3,13 @@ import { connect } from 'react-redux';
 import RangeInput from './RangeInput';
 import fetchRandomNumber from "../apiCalls/fetchRandomNumber";
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 class RangeForm extends React.Component {
 
     constructor(props) {
@@ -17,13 +24,19 @@ class RangeForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <RangeInput name="min" type="min"/>
-                    <RangeInput name="max" type="max"/>
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
+            <Container>
+                <Row>
+                    <Col/>
+                    <Col>
+                        <Form onSubmit={this.handleSubmit}>
+                            <RangeInput name="min " type="min" defaultValue="0"/>
+                            <RangeInput name="max" type="max" defaultValue="100"/>
+                            <Button type="submit" value="Submit" sie="lg" block>Submit</Button>
+                        </Form>
+                    </Col>
+                    <Col/>
+                </Row>
+            </Container>
         );
     }
 }

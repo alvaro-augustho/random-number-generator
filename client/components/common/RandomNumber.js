@@ -2,7 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const RandomNumber = ({ randomNumber }) => {
-    return <h1>Number is: {randomNumber}</h1>;
+    return randomNumber ? (
+        <div className="mt-lg-3">
+            <h3 className="text-center">Your random number is: </h3>
+            <h2 className="text-center">{randomNumber.toFixed(2)}</h2>
+        </div>
+    ) : null;
 };
 
 const mapStateToProps = appState => ({

@@ -5,13 +5,13 @@ import Home from '../components/Home';
 import Header from '../components/common/Header';
 import NotFound from '../components/common/NotFound';
 
-import '../scss/app.scss';
+import '../css/bootstrap.min.css';
 
 export default class Main extends Component {
   render() {
     return (
     	<div className="main">
-		    <Header/>
+		    <Header header="Random Number Generator"/>
 		    <Switch>
 			    <Route exact path="/" component={Home} />
 

@@ -12,11 +12,11 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div className="home">
-				<RangeForm/>
-				<RandomNumber/>
-				<ShowErrorMessage/>
-			</div>
+			<div className="mt-lg-5">
+					<RangeForm/>
+					<RandomNumber/>
+					<ShowErrorMessage/>
+				</div>
 		);
 	}
 
