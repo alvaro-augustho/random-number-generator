@@ -9,7 +9,10 @@
 5. npm run test-coverage will run unit tests and show code coverage
 
 /app contains all react logic
+
 /app/css contains the bootstrap CSS file
+
 /public contains all external CSS and JS libraries
+
 /test contains all unit tests
 
